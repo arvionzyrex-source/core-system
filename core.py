@@ -18,7 +18,7 @@ def encode_layers(data):
 
 def fake_processing():
     data = "runtime"
-    for i in range(10):
+    for i in range(100):
         data += str(i)
         data = encode_layers(data)
     return data
@@ -40,12 +40,12 @@ def main():
     print("Running engine...\n")
 
     toks = random_tokens()
-    for t in toks[:10]:
+    for t in toks[:100]:
         print("token:", t)
 
     print("\nprocessing...")
     fake = fake_processing()
-    print(fake[:80])
+    print(fake[:800])
 
     print("\nresult:", reconstruct())
 
